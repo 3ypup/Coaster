@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>PHOTOSITE</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<!-- Bootstrap -->
+		<link href="/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+	
+	    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+	    <script src="/vendor/jquery-1.12.4.min.js"></script>
+	    <!-- Include all compiled plugins (below), or include individual files as needed -->
+	    <script src="/vendor/bootstrap/js/bootstrap.min.js"></script>
+
+		
+		
+	    <!-- SimpleColorpicker -->
+
+	    
+		<script src="jquery.simplecolorpicker.js"></script>
+		<link rel="stylesheet" href="jquery.simplecolorpicker.css">
+
+
+		<!-- gallery -->
+
+	    <script src="jquery.bsPhotoGallery.js"></script>
+		<link rel="stylesheet" href="jquery.bsPhotoGallery.css">
+
+
+
+		<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+		<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+		<!--[if lt IE 9]>
+		  <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+		  <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+		<![endif]-->
+	</head>
+	<body>
+		<div class="container">
+
+			<!-- Static navbar -->
+			<h1 class="text-center " style = "font-size: 50px">Konstantin Arefiev</h1>
+
+
+			<nav class="navbar navbar-center" role="navigation">
+			  <div class="navbar-header">
+			    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+			      <span class="sr-only">Toggle navigation</span>
+			      <span class="icon-bar"></span>
+			      <span class="icon-bar"></span>
+			      <span class="icon-bar"></span>
+			    </button>
+			    
+			  </div>
+
+			  <br/>
+			  <div class="navbar-collapse collapse">
+			    <ul class="nav navbar-nav">
+			      <li><a href="/photo">PHOTO</a></li>
+			      <li><a href="/video">VIDEO</a></li>
+			      <li><a href="/blog">BLOG</a></li>
+			    </ul>
+			  </div><!--/.nav-collapse -->
+			</nav>
+			<div>
+			      <%if @error then %>
+			          <div class="alert alert-error"><%=@error%></div>
+			      <% end %>
+			      <%= yield %>
+			</div>
+
+			
+
+	</div>
+  </body>

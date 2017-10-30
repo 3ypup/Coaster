@@ -1,8 +1,9 @@
+require 'rubygems'
 require "sinatra"
 require 'sinatra/reloader'
 
 get "/" do
-	erb :index
+	erb "<a href=\"https://github.com/bootstrap-ruby/sinatra-bootstrap\""
 end
 
 get '/photo' do
@@ -11,7 +12,7 @@ end
 
 
 get '/video' do
-  "Hello World"
+  erb :video
 end
 
 get '/blog' do
