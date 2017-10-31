@@ -24,6 +24,7 @@ GEM
     tilt (2.0.8)
 
 PLATFORMS
+  java
   x64-mingw32
 
 DEPENDENCIES
