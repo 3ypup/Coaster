@@ -38,11 +38,12 @@ end
 
 post '/blog' do
  	 
- 	@content = params[:content]
+ 	#@content = params[:content]
 
-	Message.create :content => @content
+	#Message.create :content => @content
  	
-	
+	@post = Message.new params[:message]
+	@post.save
 	
  
  	 erb :details
@@ -53,12 +54,10 @@ end
 
 get '/details/:post_id' do
 
-@id = params[:post_id]
 
-	
-erb "#{@id}"
+@post = Message.find(params[:post_id])
 
-@content = Message.select(content)
+erb :details
 
 	
 
