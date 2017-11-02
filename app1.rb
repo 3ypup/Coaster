@@ -1,6 +1,16 @@
 require 'rubygems'
 require "sinatra"
 require 'sinatra/reloader'
+require 'sinatra/activerecord'
+
+
+set :database, "sqlite3:blog.db"
+
+class Message < ActiveRecord::Base
+end
+
+
+
 
 
 get "/" do
@@ -19,9 +29,38 @@ get '/video' do
 end
 
 get '/blog' do
-  "Hello World"
+
+@posts = Message.order "created_at DESC"
+	
+
+  erb :blog
+end
+
+post '/blog' do
+ 	 
+ 	@content = params[:content]
+
+	Message.create :content => @content
+ 	
+	
+	
+ 
+ 	 erb :details
 end
 
 
 
+
+get '/details/:post_id' do
+
+@id = params[:post_id]
+
 	
+erb "#{@id}"
+
+@content = Message.select(content)
+
+	
+
+
+end
