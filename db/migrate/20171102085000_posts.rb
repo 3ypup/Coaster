@@ -4,6 +4,7 @@ class Posts < ActiveRecord::Migration[5.1]
 
   	create_table :messages do |t|
   		t.text :content
+  		t.text :title
   		
 
   		t.timestamps 
@@ -11,7 +12,7 @@ class Posts < ActiveRecord::Migration[5.1]
   	end
 
 
-  		Message.create :content => 'testpost'
+  		Message.create :content => 'testpost', :title => 'test'
 
 
   end

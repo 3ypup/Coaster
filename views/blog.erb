@@ -13,7 +13,7 @@
 
 <% @posts.each do |posts| %>
 
-
+<h2> <%= posts.title %> </h2>
  <p> <%= posts.content %> </p>
 <p2> <a name = "post_id" href = "/details/<%= posts.id %>">Комментарии <%= posts.created_at %> </a> </p2>
 
@@ -27,7 +27,10 @@
 
 <form action = "/blog" method = "Post" role = "form">
 <br/>
-<textarea name = "message[content]" class="form-control" id="exampleFormControlTextarea1" rows="10" placeholder = "Введите свой текст" style = "width: 500px" ></textarea>
+<textarea name = "message[title]" class="form-control" id="exampleFormControlTextarea1" rows="2" placeholder = "Введите название поста" style = "width: 300px" ></textarea>
+
+<br/>
+<textarea name = "message[content]" class="form-control" id="exampleFormControlTextarea1" rows="4" placeholder = "Здесь будет текст поста" style = "width: 500px" ></textarea>
 <br/>
 
  <button type="submit" class="btn btn-primary">Submit</button>
