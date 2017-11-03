@@ -3,6 +3,7 @@ class Posts < ActiveRecord::Migration[5.1]
 
 
   	create_table :messages do |t|
+  		
   		t.text :content
   		t.text :title
   		
@@ -11,8 +12,11 @@ class Posts < ActiveRecord::Migration[5.1]
 
   	end
 
+  	
+
 
   		Message.create :content => 'testpost', :title => 'test'
+  		Message.create :content => 'testpost2', :title => 'test2'
 
 
   end

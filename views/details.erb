@@ -2,33 +2,44 @@
 
 <head>
 
-
 <p2>Пост  <%= @post.created_at %></p2>
 
 <h2>  <%= @post.title %> </h2>
 </head>
-
-
-
-
-
-
-
-
-
 
 <body>
  <p2>
 
 <%= @post.content %>
 </p2>
-	
-	
-	
-
-	<br/>
+<br/>
 
 
+<br/>
+
+
+<br/>
+
+<% @comment.each do |comment| %>
+
+<h2> <%= comment.text %> </h2>
+ 
+
+<% end %>
+
+
+
+
+<form action = "/details/<%= @post.id %>" method = "Post" role = "form">
+
+<textarea name = "text" class="form-control"  rows="2" placeholder = "Введите комменарий" style = "width: 300px" ></textarea>
+
+
+
+
+
+ <button type="submit" class="btn btn-primary">Submit</button>
+</form>
 
 
 </body>
