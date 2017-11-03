@@ -6,7 +6,6 @@
 
 <h2>  <%= @post.title %> </h2>
 </head>
-
 <body>
  <p2>
 
@@ -22,7 +21,7 @@
 
 <% @comment.each do |comment| %>
 
-<h2> <%= comment.text %> </h2>
+<p2> <%= comment.text %> </p2><br/>
  
 
 <% end %>
@@ -32,7 +31,7 @@
 
 <form action = "/details/<%= @post.id %>" method = "Post" role = "form">
 
-<textarea name = "text" class="form-control"  rows="2" placeholder = "Введите комменарий" style = "width: 300px" ></textarea>
+<textarea value = "" name = "text" class="form-control"  rows="2" id = "textcomment" placeholder = "Введите комменарий" style = "width: 300px" ></textarea>
 
 
 
