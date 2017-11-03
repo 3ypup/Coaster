@@ -51,7 +51,7 @@ post '/blog' do
 	@post.save
 	
  
- 	 erb :details
+ 	 erb :post
 end
 
 
